@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Google Advanced Search Builder</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100 min-h-screen flex items-center justify-center">
+  <div class="bg-white p-8 rounded shadow-md w-full max-w-2xl">
+    <h1 class="text-2xl font-bold mb-4">Google Advanced Search Builder</h1>
+    
+    <!-- Search Term Input -->
+    <div class="mb-4">
+      <label for="search-term" class="block text-gray-700">Search Term:</label>
+      <input type="text" id="search-term" class="mt-1 block w-full p-2 border border-gray-300 rounded" placeholder="Enter your search term">
+    </div>
+
+    <!-- Advanced Search Options -->
+    <div class="mb-4">
+      <label for="advanced-options" class="block text-gray-700">Advanced Search Options:</label>
+      <div class="grid grid-cols-2 gap-4 mt-2">
+        <!-- allintext -->
+        <div>
+          <label class="block text-gray-700">Text in Page:</label>
+          <input type="text" id="allintext" class="mt-1 block w-full p-2 border border-gray-300 rounded" placeholder="Words in the page text">
+        </div>
+        <!-- allintitle -->
+        <div>
+          <label class="block text-gray-700">Text in Title:</label>
+          <input type="text" id="allintitle" class="mt-1 block w-full p-2 border border-gray-300 rounded" placeholder="Words in the page title">
+        </div>
+        <!-- inurl -->
+        <div>
+          <label class="block text-gray-700">Text in URL:</label>
+          <input type="text" id="inurl" class="mt-1 block w-full p-2 border border-gray-300 rounded" placeholder="Words in the URL">
+        </div>
+        <!-- filetype -->
+        <div>
+          <label class="block text-gray-700">File Type:</label>
+          <input type="text" id="filetype" class="mt-1 block w-full p-2 border border-gray-300 rounded" placeholder="e.g., pdf, doc">
+        </div>
+        <!-- site -->
+        <div>
+          <label class="block text-gray-700">Website or Domain:</label>
+          <input type="text" id="site" class="mt-1 block w-full p-2 border border-gray-300 rounded" placeholder="e.g., example.com">
+        </div>
+        <!-- Additional options -->
+        <div>
+          <label class="block text-gray-700">Exclude Terms:</label>
+          <input type="text" id="exclude" class="mt-1 block w-full p-2 border border-gray-300 rounded" placeholder="Terms to exclude">
+        </div>
+        <div>
+          <label class="block text-gray-700">Exact Match:</label>
+          <input type="text" id="exact" class="mt-1 block w-full p-2 border border-gray-300 rounded" placeholder="Exact phrase">
+        </div>
+        <div>
+          <label class="block text-gray-700">OR Terms:</label>
+          <input type="text" id="orTerms" class="mt-1 block w-full p-2 border border-gray-300 rounded" placeholder="term1 OR term2">
+        </div>
+        <div>
+          <label class="block text-gray-700">AROUND Terms:</label>
+          <input type="text" id="aroundTerms" class="mt-1 block w-full p-2 border border-gray-300 rounded" placeholder="term1 AROUND(X) term2">
+        </div>
+      </div>
+    </div>
+
+    <!-- Real-time Search String -->
+    <div class="mb-4">
+      <label for="search-link" class="block text-gray-700">Search Link:</label>
+      <input type="text" id="search-link" class="mt-1 block w-full p-2 border border-gray-300 rounded bg-gray-100" readonly>
+    </div>
+
+    <!-- Search Button -->
+    <div class="flex justify-end">
+      <button id="search-button" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-700">Search</button>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
